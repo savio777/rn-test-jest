@@ -22,4 +22,12 @@ describe('StarRating', () => {
       expect(element).toBeTruthy();
     });
   });
+
+  describe('rating was not passed', () => {
+    it('render nothing', () => {
+      const {root} = render(<StarRating />);
+
+      expect(root).toEqual(undefined);
+    });
+  });
 });
