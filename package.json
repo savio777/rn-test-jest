@@ -6,7 +6,8 @@
     "android": "react-native run-android",
     "ios": "react-native run-ios",
     "start": "react-native start",
-    "test": "jest --coverage=true --silent --verbose",
+    "test": "jest --silent --verbose",
+    "test:coverage": "jest --coverage=true --silent --verbose",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
   },
   "dependencies": {
@@ -62,6 +63,9 @@
     ],
     "setupFiles": [
       "./node_modules/react-native-gesture-handler/jestSetup.js"
+    ],
+    "modulePathIgnorePatterns": [
+      ".mock.ts"
     ]
   }
 }
